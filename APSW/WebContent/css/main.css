@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+html {
+	height: 100%;
+	font-family: Verdana, Helvetica, sans-serif;
+}
+
+body {
+	background-image: url("../img/sfondo.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.content {
+	border-radius: 25px;
+	text-align: center;
+	border: 2px white solid;
+	background: rgba(255, 255, 255, 0.6);
+	
+	padding: 15px;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.contentLarge {
+	border-radius: 25px;
+	text-align: center;
+	border: 2px white solid;
+	background: rgba(255, 255, 255, 0.6);
+	
+	padding: 15px;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.centralDiv {
+	background: rgba(255, 255, 255, 0.6);
+	text-align: center;
+	width: 40%;
+}
+
+.customTable {
+	margin: 20px auto;
+	border: 1px #ff730f solid;
+	border-radius: 25px;
+	padding:15px 25px 15px 15px;;
+}
+
+th, td {
+	padding-right: 10px;
+}
+
+header {
+	margin-bottom: 50px;
+}
+
+header, footer {
+	margin-top: 50px;
+	color: white;
+	text-align: center;
+}
+
+.customButton {
+	background-color:#ff730f;
+	border-radius:25px;
+	border:1px solid #ff730f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:10px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4d2305;
+}
+
+.customButtonSmall {
+	background-color:#ff730f;
+	border-radius:15px;
+	border:1px solid #ff730f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:13px;
+	padding:8px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4d2305;
+}
+
+.customButton:hover {
+	background-color:#ff730f;
+}
+.customButton:active {
+	position:relative;
+	top:1px;
+}
+
+input[type=text], input[type=number], input[type=date], input[type=email], input[type=password], select {
+  border-radius: 4px;
+  border:1px solid #ff730f;
+}
+
+input:disabled, select:disabled{
+	cursor:not-allowed;
+}
+
+a:link, a:visited {
+    color: #c5652a;
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: underline;
+    color: #4d2305;
+}
+
+table {
+	margin: auto;
+}

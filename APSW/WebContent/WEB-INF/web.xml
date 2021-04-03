@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>APSW</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>reserved</web-resource-name>
+      <url-pattern>/amministratore/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>4</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>reserved</web-resource-name>
+      <url-pattern>/biglietteria/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+    	<role-name>4</role-name>
+		<role-name>3</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>reserved</web-resource-name>
+      <url-pattern>/cassiere/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+    	<role-name>4</role-name>
+      	<role-name>2</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>reserved</web-resource-name>
+      <url-pattern>/bagnino/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>1</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>reserved</web-resource-name>
+      <url-pattern>/cliente/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>0</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>reserved</web-resource-name>
+      <url-pattern>/cliente/modificaDati</url-pattern>
+      <url-pattern>/cliente/modificaDati.jsp</url-pattern>
+      <url-pattern>/cliente/js/modificaDati.js</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>0</role-name>
+      <role-name>1</role-name>
+      <role-name>2</role-name>
+      <role-name>3</role-name>
+      <role-name>4</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <security-role>
+    <role-name>4</role-name>
+  </security-role>
+  
+  <security-role>
+    <role-name>3</role-name>
+  </security-role>
+  
+  <security-role>
+    <role-name>2</role-name>
+  </security-role>
+  
+  <security-role>
+    <role-name>1</role-name>
+  </security-role>
+  
+  <security-role>
+    <role-name>0</role-name>
+  </security-role>
+  
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/index.jsp</form-login-page>
+      <form-error-page>/loginError.jsp</form-error-page>
+    </form-login-config>
+  </login-config>
+  
+  <resource-env-ref>
+    <resource-env-ref-name>jdbc/LavalleSiragusaLido</resource-env-ref-name>
+    <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
+</resource-env-ref>
+
+<error-page>
+   <error-code>404</error-code>
+   <location>/errorPage.jsp</location>
+ </error-page>
+ 
+<error-page>
+   <error-code>403</error-code>
+   <location>/errorPage.jsp</location>
+ </error-page>
+
+</web-app>
